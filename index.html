@@ -11,17 +11,17 @@
 <body>
     <div id="app">
         <div id="head_elem">
-            <input type="text" :class="style" placeholder="Название" id="inp">
-            <button @click="add">Добавить</button>
-            <button @click="clear">Очистить список </button>
+            <input type="text" :class="style" placeholder="РќР°Р·РІР°РЅРёРµ" id="inp">
+            <button @click="add">Р”РѕР±Р°РІРёС‚СЊ</button>
+            <button @click="clear">РћС‡РёСЃС‚РёС‚СЊ СЃРїРёСЃРѕРє </button>
         </div>
 
         <ol id="list">
-            <li v-for="(item,index) in list" :class='{done: item.done}'>
-                <span @click='mark(index)'>
+            <li v-for="(item,index) in list" >
+                <span @click='mark(index)' :class='{done: item.done}'>
                     {{item.text}}
                 </span>
-                <button @click='del(index)'>Удалить </button></li>
+                <button @click='del(index)'>РЈРґР°Р»РёС‚СЊ </button></li>
         </ol>
     </div>
     <script src="vue.js"></script>
